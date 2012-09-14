@@ -1,4 +1,14 @@
 class TasksController < ApplicationController
+  
+  
+  def administration
+    @tasks = Task.all
+    render action: "index"
+    #respond_to do |format|
+    #  format.html {}
+    #end
+  end
+  
   # GET /tasks
   # GET /tasks.json
   def index

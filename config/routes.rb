@@ -1,6 +1,6 @@
 TaskmanagerFinal::Application.routes.draw do
   resources :tasks
-
+  resources :statuses
   resources :users
 
   # The priority is based upon order of creation:

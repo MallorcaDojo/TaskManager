@@ -1,10 +1,6 @@
 TaskmanagerFinal::Application.routes.draw do
-<<<<<<< HEAD
   resources :projects
-=======
   resources :comments
->>>>>>> 3f50b0d71f7cba7cd7f79cc837383613f55918fe
-
   resources :tasks
   resources :statuses
   resources :users

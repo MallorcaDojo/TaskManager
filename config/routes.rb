@@ -1,4 +1,6 @@
 TaskmanagerFinal::Application.routes.draw do
+  resources :comments
+
   resources :tasks
   resources :statuses
   resources :users

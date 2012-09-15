@@ -6,6 +6,7 @@ TaskmanagerFinal::Application.routes.draw do
   resources :users
   
   match 'admin', :to => 'tasks#administration', :via => [:get]
+  match 'test', :to => 'tasks#test', :via => [:get]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

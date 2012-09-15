@@ -7,6 +7,7 @@ TaskmanagerFinal::Application.routes.draw do
   
   match 'admin', :to => 'tasks#administration', :via => [:get]
   match 'move_task', :to => 'tasks#move_task', :via => [:put]
+  match 'test', :to => 'tasks#test', :via => [:get]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

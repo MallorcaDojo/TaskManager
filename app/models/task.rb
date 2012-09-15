@@ -4,4 +4,5 @@ class Task < ActiveRecord::Base
   belongs_to :status
   belongs_to :user
   belongs_to :project
+  enumerate :priority, :with => Priority
 end

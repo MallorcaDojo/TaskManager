@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(:version => 20120914213150) do
 
   create_table "comments", :force => true do |t|
     t.text     "text"
+    t.integer  "task_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -42,6 +43,9 @@ ActiveRecord::Schema.define(:version => 20120914213150) do
     t.string   "description"
     t.integer  "priority"
     t.datetime "deadline"
+    t.integer  "status_id"
+    t.integer  "user_id"
+    t.integer  "project_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end

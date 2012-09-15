@@ -1,13 +1,16 @@
 TaskmanagerFinal::Application.routes.draw do
+  
   resources :projects
   resources :comments
   resources :tasks
   resources :statuses
   resources :users
+  resources :sessions
   
   match 'admin', :to => 'tasks#administration', :via => [:get]
   match 'move_task', :to => 'tasks#move_task', :via => [:put]
   match 'test', :to => 'tasks#test', :via => [:get]
+  match 'kill_session',:to => "sessions#destroy", :via => [:get]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

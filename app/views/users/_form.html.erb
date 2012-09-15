@@ -1,39 +1,59 @@
 <div class="form-horizontal">
-<%= form_for(@user) do |f| %>
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+	<%= form_for(@user) do |f| %>
+	<% if @user.errors.any? %>
+	<div id="error_explanation">
+		<h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
-      <ul>
-      <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+		<ul>
+			<% @user.errors.full_messages.each do |msg| %>
+			<li>
+				<%= msg %>
+			</li>
+			<% end %>
+		</ul>
+	</div>
+	<% end %>
 
-  <div class="control-group">
-    <%= f.label :lastname %>
-    <div class="controls">
-    	<%= f.text_field :lastname %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :firstname %>
-    <div class="controls">
-    	<%= f.text_field :firstname %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :birthday %>
-    <div class="controls">
-    	<%= f.date_select :birthday %>
-    </div>
-  </div>
+	<div class="control-group">
+		<%= f.label :lastname %>
+		<div class="controls">
+			<%= f.text_field :lastname %>
+		</div>
+	</div>
+	<div class="control-group">
+		<%= f.label :firstname %>
+		<div class="controls">
+			<%= f.text_field :firstname %>
+		</div>
+	</div>
+	<div class="control-group">
+		<%= f.label :birthday %>
+		<div class="controls">
+			<%= f.date_select :birthday %>
+		</div>
+	</div>
+	<div class="control-group">
+		<%= f.label :email %>
+		<div class="controls">
+			<%= f.text_field :email %>
+		</div>
+	</div>
+	<div class="control-group">
+		<%= f.label :password %>
+		<div class="controls">
+			<%= f.password_field :password %>
+		</div>
+	</div>
+	<div class="control-group">
+		<%= f.label :password_confirmation %>
+		<div class="controls">
+			<%= f.password_field :password_confirmation %>
+		</div>
+	</div>
 	<div class="control-group">
 		<div class="controls">
 			<%= f.submit %>
 		</div>
 	</div>
-<% end %>
+	<% end %>
 </div>

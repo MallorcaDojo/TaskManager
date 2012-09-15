@@ -5,9 +5,17 @@ one:
   description: Beschreibung Task1
   priority: 1
   deadline: 2012-09-16 10:47:44
+  id: 1
+  status: dev
+  project: one
+  user: one
 
 two:
   name: Task2
   description: Beschreibung Task2
   priority: 1
   deadline: 2012-09-17 10:47:44
+  id: 2
+  status: test
+  project: one
+  user: one

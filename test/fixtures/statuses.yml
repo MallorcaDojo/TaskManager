@@ -1,9 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
+dev:
   name: Entwicklung
   description: Status fuer Entwicklung
+  id: 1
 
-two:
+test:
   name: Test
   description: Status fuer Test 
+  id: 2
+  
+one:
+  name: One
+  description: Dummy Status fuer One
+  id: 100

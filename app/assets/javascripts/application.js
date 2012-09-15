@@ -17,7 +17,9 @@
 $(document).ready(function () {
 	$('label').addClass('control-label');
 	
-	
+	$('#myModalButton, #myModal .close').click(function(){
+		$('#myModal').toggle();
+	});
 	
 	$( "#dashboard tbody tr" ).draggable({
 		helper: "clone"

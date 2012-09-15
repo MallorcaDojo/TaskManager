@@ -1,7 +1,11 @@
 TaskmanagerFinal::Application.routes.draw do
+  resources :projects
+  resources :comments
+  resources :tasks
   resources :statuses
-
   resources :users
+  
+  match 'admin', :to => 'tasks#administration', :via => [:get]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

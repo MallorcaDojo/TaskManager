@@ -4916,7 +4916,7 @@ input[type="submit"] .caret {
   border-top-right-radius: 4px;
   border: 1px solid #dddddd;
   border-bottom: 0;
-  padding: 10px 0;
+  padding: 5px 0;
 }
 #dashboard .tasklist table th,
 #dashboard .tasklist table td {
@@ -4930,6 +4930,31 @@ input[type="submit"] .caret {
 }
 #dashboard .tasklist table tr td:last-child {
   width: 75px;
+}
+#dashboard caption.pending {
+  background-color: #FCF8E3;
+  color: #C09853;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+#dashboard caption.unassigned {
+  background-color: #F2DEDE;
+  color: #B94A48;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+#dashboard caption.implementing {
+  background-color: #FCD8FC;
+  color: #907890;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+#dashboard caption.testing {
+  background-color: #D9EDF7;
+  color: #3A87AD;
+  txt-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+#dashboard caption.completed {
+  background-color: #DFF0D8;
+  color: #468847;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 tr.ui-draggable-dragging td {
   background-color: #fffff5;

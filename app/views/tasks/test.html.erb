@@ -1,0 +1,63 @@
+<% content_for :custom_script do %>
+<script type="text/javascript">
+	$(document).ready(function() {
+		//resetDraggable();
+		setupDragDrop($("#status0 tr"),$("#status1 tr"))
+	});
+	
+	function setupDragDrop(source, target) {
+    source.draggable({
+        helper: function(event) {
+            return $('<div class="drag-row"><table></table></div>')
+                .find('table').append($(event.target).closest('tr').clone()).end();
+        },
+        appendTo: 'body'
+    });
+
+    target.droppable({
+        drop: function(event, ui) {
+            alert('row dropped ' + $(this).text());
+        },
+        accept: source.selector
+    });
+}
+/*
+	function resetDraggable() {
+		
+		$("#status0").draggable({
+        helper: function(event) {
+            return $('<div class="drag-row"><table></table></div>')
+                .find('table').append($(event.target).closest('tr').clone()).end();
+        },
+        appendTo: 'body'
+    });
+	}
+	/*	
+		$("tr.taskRow").each(function() {
+			alert("hallo");
+		  $this = $(this);
+		  $this.draggable();
+		});
+	}*/
+
+</script>
+<% end %>
+
+<h1>Drag and Drop - TestView</h1>
+
+<table id="status0">
+	<th>Name</th><th>Description</th>
+	<% @tasks.each do |task| %>
+	<tr class="taskRow">
+		<td><%= task.name %></td>
+		<td><%= task.description %></td>
+	</tr>
+	<% end %>
+	<table>
+
+		<hr />
+
+		<table id="status1">
+
+	<th>Name</th><th>Description</th>
+	<table>

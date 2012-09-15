@@ -6,5 +6,5 @@ class User < ActiveRecord::Base
   
   has_secure_password
   validates_presence_of :password, :on => :create
-  validates :firstname, :presence => true
+	validates :firstname, :presence => true
 end

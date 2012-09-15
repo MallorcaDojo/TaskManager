@@ -11,6 +11,7 @@ class Task < ActiveRecord::Base
   before_save :set_default
   
   def set_default
-    self.priority = 4
+    self.priority = Priority.get_lowest_priority unless self.priority
+    self.status = Status.find(1) unless self.status
   end
 end

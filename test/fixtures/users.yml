@@ -4,10 +4,8 @@ one:
   lastname: Mustermann
   firstname: Max
   birthday: 1980-09-14
-  id: 1
 
 two:
   lastname: Musterfrau
   firstname: Maria
   birthday: 1990-09-14
-  id: 2

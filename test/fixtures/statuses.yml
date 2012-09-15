@@ -1,16 +1,20 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-dev:
-  name: Entwicklung
-  description: Status fuer Entwicklung
-  id: 1
+unassigned:
+  name: Unassigned
+  description: Task steht im Status Unassigned
+  #id: 1
 
-test:
-  name: Test
-  description: Status fuer Test 
-  id: 2
+implementing:
+  name: Implementing
+  description: Task steht im Status Implementierung 
+  #id: 2
   
-one:
-  name: One
-  description: Dummy Status fuer One
-  id: 100
+testing:
+  name: Testing
+  description: Task steht im Status Testing
+  #id: 100
+
+completed:
+  name: Completed
+  description: Task steht im Status Completed

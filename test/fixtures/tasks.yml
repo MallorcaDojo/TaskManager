@@ -5,8 +5,7 @@ one:
   description: Beschreibung Task1
   priority: 1
   deadline: 2012-09-16 10:47:44
-  id: 1
-  status: dev
+  status: unassigned
   project: one
   user: one
 
@@ -15,7 +14,61 @@ two:
   description: Beschreibung Task2
   priority: 1
   deadline: 2012-09-17 10:47:44
-  id: 2
-  status: test
+  status: unassigned
   project: one
   user: one
+
+three:
+  name: Task3
+  description: Beschreibung Task1
+  priority: 1
+  deadline: 2012-09-16 10:47:44
+  status: unassigned
+  project: one
+  user: one
+
+four:
+  name: Task4
+  description: Beschreibung Task2
+  priority: 4
+  deadline: 2012-09-17 10:47:44
+  status: unassigned
+  project: one
+  user: one
+
+five:
+  name: Task1
+  description: Beschreibung Task1
+  priority: 1
+  deadline: 2012-09-16 10:47:44
+  status: implementing
+  project: one
+  user: one
+
+six:
+  name: Task2
+  description: Beschreibung Task2
+  priority: 1
+  deadline: 2012-09-17 10:47:44
+  status: implementing
+  project: one
+  user: one
+
+seven:
+  name: Task3
+  description: Beschreibung Task1
+  priority: 3
+  deadline: 2012-09-16 10:47:44
+  status: implementing
+  project: one
+  user: one
+
+eight:
+  name: Task4
+  description: Beschreibung Task2
+  priority: 2
+  deadline: 2012-09-17 10:47:44
+  status: implementing
+  project: one
+  user: one
+

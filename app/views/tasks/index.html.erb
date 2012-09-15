@@ -16,7 +16,7 @@
 				</thead>
 			  
 			  <tbody>
-				<% @tasks.each do |task| %>
+				<% @unassigned.each do |task| %>
 				  <tr>
 				    <td><%= task.name %></td>
 				    <td><%= task.description %></td>
@@ -47,7 +47,7 @@
 				</thead>
 			  
 				<tbody>
-				<% @tasks.each do |task| %>
+				<% @implementing.each do |task| %>
 				  <tr>
 				    <td><%= task.name %></td>
 				    <td><%= task.description %></td>
@@ -78,7 +78,7 @@
 				</thead>
 			  
 				<tbody>
-				<% @tasks.each do |task| %>
+				<% @testing.each do |task| %>
 				  <tr>
 				    <td><%= task.name %></td>
 				    <td><%= task.description %></td>
@@ -109,7 +109,7 @@
 				</thead>
 			  
 				<tbody>
-				<% @tasks.each do |task| %>
+				<% @completed.each do |task| %>
 				  <tr>
 				    <td><%= task.name %></td>
 				    <td><%= task.description %></td>
@@ -142,7 +142,7 @@
 				</thead>
 			  
 				<tbody>
-				<% @tasks.each do |task| %>
+				<% @pending.each do |task| %>
 				  <tr>
 				    <td><%= task.name %></td>
 				    <td><%= task.description %></td>

@@ -12,6 +12,6 @@ class Task < ActiveRecord::Base
   
   def set_default
     self.priority = Priority.get_lowest_priority unless self.priority
-    self.status = Status.find(1) unless self.status
+    self.status = Status.first unless self.status or !Status.all
   end
 end

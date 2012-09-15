@@ -1,20 +1,17 @@
 class TasksController < ApplicationController
   
-  
-  def test
-    @tasks = Task.all
+  def move_task
+    $task_id = params[:task_id]
+    $new_status = params[:status]
+    $user = ApplicationController.current_user
+    #$user = session[:current_user_id]
     
-    if @tasks.size == 0
-      Task.new(:name=>"Task0",:description=>"Desc0").save
-      Task.new(:name=>"Task1",:description=>"Desc1").save
-      Task.new(:name=>"Task2",:description=>"Desc2").save
-      Task.new(:name=>"Task3",:description=>"Desc3").save
-      Task.new(:name=>"Task4",:description=>"Desc4").save
-      Task.new(:name=>"Task5",:description=>"Desc5").save
-   
-      @tasks = Task.all     
-    end
+    $task = Task.find($task_id)
+    $task.status = $new_status
+    $task.user = $user
+    render :text => $task.save
   end
+
   
   def administration
     @tasks = Task.all

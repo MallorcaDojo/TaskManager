@@ -5,6 +5,15 @@ class TasksControllerTest < ActionController::TestCase
     @task = tasks(:one)
   end
 
+  test "should assign task" do
+    $task_id = tasks(:one).id
+    $status_vorher = tasks(:one).status
+    $task = put(:move_task, {'task_id' => $task_id}, {'status' => "pending"})
+    assert_response :success
+    $status_nachher = $task.status
+    assert_not_same($status_vorher, $status_nachher)
+  end
+
   test "should get index" do
     get :index
     assert_response :success

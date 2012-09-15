@@ -5,6 +5,9 @@ class TaskTest < ActiveSupport::TestCase
   #   assert true
   # end
   def test_tasks
+    status1 = Status.new(:name=>"Unassigned",:description=>"Tasks currently not assigend to a user.")
+    assert status1.save, "Did not save status."
+    
     task1 = Task.new(
       :deadline => "2012-09-30", 
       :description => "Erstellung der Masken",

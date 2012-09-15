@@ -3,4 +3,6 @@ class User < ActiveRecord::Base
   
   has_many :tasks
   has_and_belongs_to_many :projects
+  
+  validates :firstname, :presence => true
 end

@@ -1,5 +1,19 @@
 class StatusesController < ApplicationController
-  # GET /statuses
+
+  def init
+    @statuses = Status.all
+    
+    if @statuses.size == 0
+      Status.new(:name=>"Unassigned",:description=>"Tasks currently not assigend to a user.").save
+      Status.new(:name=>"Implementing",:description=>"Tasks currently being implemented by a user.").save
+      Status.new(:name=>"Testing",:description=>"Tasks currently being tested by a user.").save
+      Status.new(:name=>"Completed",:description=>"Completed tasks.").save
+      Status.new(:name=>"Waiting",:description=>"Tasks currently waiting for input to continue.").save
+   
+      @statuses = Task.all     
+    end
+  end
+
   # GET /statuses.json
   def index
     @statuses = Status.all

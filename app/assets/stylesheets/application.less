@@ -3,6 +3,10 @@
 body {
 }
 
+[class^="icon-"], [class*=" icon-"] {
+  background-image: url("../assets/glyphicons-halflings.png");
+}
+
 header {
 
 }
@@ -21,8 +25,63 @@ footer {
 
 input[type="submit"] {
 	.btn;
+	.btn-primary;
 }
 
 .field label {
   margin-left: 0;
 }
+
+#dashboard {
+  .tasklist table {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #dddddd;
+    .border-top-left-radius(0px);
+    .border-top-right-radius(0px);
+    
+    caption {
+      .border-top-left-radius(4px);
+      .border-top-right-radius(4px);
+      border: 1px solid #dddddd;
+      border-bottom: 0;
+      padding: 5px 0;
+    }
+    
+    th, td {
+      border-left: 0;
+    }
+    
+    a {
+      margin-right: 10px;
+      
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    
+    tr td:last-child{
+      width: 75px;
+    }
+  }
+  
+  .abstimmung {
+    table {
+    }
+  }
+  
+  caption {
+    &.pending {background-color: #FCF8E3; color: #C09853; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5)}
+    &.unassigned {background-color: #F2DEDE; color: #B94A48; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5)}
+    &.implementing {background-color: #FCD8FC; color: #907890; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5)}
+    &.testing {background-color: #D9EDF7; color: #3A87AD; txt-shadow: 0 1px 0 rgba(255, 255, 255, 0.5)}
+    &.completed {background-color: #DFF0D8; color: #468847; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5)}
+  }
+  
+}
+
+  tr.ui-draggable-dragging td {
+    background-color: #fffff5;
+    width: 114px;
+    .opacity(80);
+  }

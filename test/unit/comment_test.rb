@@ -2,6 +2,9 @@ require 'test_helper'
 
 class CommentTest < ActiveSupport::TestCase
   def test_create_comment_with_task
+    teststatus = Status.new(:name=>"Unassigned",:description=>"Tasks currently not assigend to a user.")
+    teststatus.save
+    
     testtask = Task.new(
       :deadline => "2012-09-30", 
       :description => "Erstellung der Masken",

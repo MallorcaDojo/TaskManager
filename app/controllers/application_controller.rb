@@ -11,8 +11,8 @@ class ApplicationController < ActionController::Base
       
       #puts !logged_in? && controller_name.eql?("sessions") && action_name.eql?("new")
       if !logged_in? && !controller_name.eql?("sessions") && !action_name.eql?("new")  
-        puts controller_name.eql?("sessions")
-        puts action_name.eql?("new")
+        #puts controller_name.eql?("sessions")
+        #puts action_name.eql?("new")
         redirect_to :controller => "sessions", :action => "new"
       end 
 

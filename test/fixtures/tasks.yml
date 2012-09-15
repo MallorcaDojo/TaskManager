@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  name: MyString
-  description: MyString
+  name: Task1
+  description: Beschreibung Task1
   priority: 1
-  deadline: 2012-09-14 10:47:44
+  deadline: 2012-09-16 10:47:44
 
 two:
-  name: MyString
-  description: MyString
+  name: Task2
+  description: Beschreibung Task2
   priority: 1
-  deadline: 2012-09-14 10:47:44
+  deadline: 2012-09-17 10:47:44

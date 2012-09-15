@@ -1,5 +1,17 @@
 class TasksController < ApplicationController
   
+  def move_task
+    $task_id = params[:task_id]
+    $new_status = params[:status]
+    $user = ApplicationController.current_user
+    #$user = session[:current_user_id]
+    
+    $task = Task.find($task_id)
+    $task.status = $new_status
+    $task.user = $user
+    render :text => $task.save
+  end
+
   
   def administration
     @tasks = Task.all

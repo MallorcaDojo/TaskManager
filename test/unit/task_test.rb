@@ -16,7 +16,6 @@ class TaskTest < ActiveSupport::TestCase
       :deadline => "2012-09-29", 
       :description => "Implementierung der Logik im Controller",
       :name => "Controller", 
-      :priority => 2
      )
      
     task3 = Task.new(

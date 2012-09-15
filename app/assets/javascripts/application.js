@@ -16,4 +16,20 @@
 
 $(document).ready(function () {
 	$('label').addClass('control-label');
+	
+	
+	
+	$( "#dashboard tbody tr" ).draggable({
+		helper: "clone"
+	});
+	$( "#dashboard tbody tr, #dashboard thead" ).droppable({
+		activeClass: "ui-state-default",
+		hoverClass: "ui-state-hover",
+		accept: ":not(.ui-sortable-helper)",
+		drop: function( event, ui ) {
+			$( this ).find( ".placeholder" ).remove();
+			$(ui.draggable).insertAfter( this );
+		}
+	});
+	
 });

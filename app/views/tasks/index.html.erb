@@ -27,3 +27,165 @@
 <br />
 
 <%= link_to 'New Task', new_task_path %>
+
+
+<hr/>
+
+<div class="container-fluid" id="dashboard">
+  <div class="row-fluid">
+    <div class="span8">
+
+      <div class="row tasklist">
+      		<table class="table table-striped table-bordered table-hover">
+      			<caption>FOO Bar Baz</caption>
+      			<thead>
+				  <tr>
+				    <th>Name</th>
+				    <th>Description</th>
+				    <th>Priority</th>
+				    <th>Deadline</th>
+				    <th>Actions</th>
+				  </tr>
+				</thead>
+			  
+			  <tbody>
+				  <tr>
+				    <td>1</td>
+				    <td>werwer</td>
+				    <td>werwer</td>
+				    <td>werwer</td>
+				    <td>
+				    	<a href="#"><i class="icon-eye-open"></i></a>
+				    	<a href="#"><i class="icon-edit"></i></a>
+				    	<a href="#"><i class="icon-remove"></i></a>
+				    </td>
+				  </tr>
+				  
+				  <tr>
+				    <td>2</td>
+				    <td>werwer</td>
+				    <td>werwer</td>
+				    <td>werwer</td>
+				    <td>
+				    	<a href="#"><i class="icon-eye-open"></i></a>
+				    	<a href="#"><i class="icon-edit"></i></a>
+				    	<a href="#"><i class="icon-remove"></i></a>
+				    </td>
+				  </tr>
+				  
+				  <tr>
+				    <td>3</td>
+				    <td>werwer</td>
+				    <td>werwer</td>
+				    <td>werwer</td>
+				    <td>
+				    	<a href="#"><i class="icon-eye-open"></i></a>
+				    	<a href="#"><i class="icon-edit"></i></a>
+				    	<a href="#"><i class="icon-remove"></i></a>
+				    </td>
+				  </tr>
+				  
+				<% @tasks.each do |task| %>
+				  <tr>
+				    <td><%= task.name %></td>
+				    <td><%= task.description %></td>
+				    <td><%= task.priority %></td>
+				    <td><%= task.deadline %></td>
+				    <td><%= link_to 'Show', task %></td>
+				    <td><%= link_to 'Edit', edit_task_path(task) %></td>
+				    <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+				  </tr>
+				<% end %>
+			  </tbody>
+			</table>
+      </div>
+
+      <div class="row tasklist">
+      	<table class="table table-striped table-bordered table-hover">
+      			<caption>FOO Bar Baz</caption>
+      			<thead>
+				  <tr>
+				    <th>Name</th>
+				    <th>Description</th>
+				    <th>Priority</th>
+				    <th>Deadline</th>
+				    <th>Actions</th>
+				  </tr>
+				</thead>
+			  
+			  <tbody>
+				  <tr>
+				    <td>4</td>
+				    <td>werwer</td>
+				    <td>werwer</td>
+				    <td>werwer</td>
+				    <td>
+				    	<a href="#"><i class="icon-eye-open"></i></a>
+				    	<a href="#"><i class="icon-edit"></i></a>
+				    	<a href="#"><i class="icon-remove"></i></a>
+				    </td>
+				  </tr>
+				  
+				  <tr>
+				    <td>5</td>
+				    <td>werwer</td>
+				    <td>werwer</td>
+				    <td>werwer</td>
+				    <td>
+				    	<a href="#"><i class="icon-eye-open"></i></a>
+				    	<a href="#"><i class="icon-edit"></i></a>
+				    	<a href="#"><i class="icon-remove"></i></a>
+				    </td>
+				  </tr>
+				  
+				  <tr>
+				    <td>6</td>
+				    <td>werwer</td>
+				    <td>werwer</td>
+				    <td>werwer</td>
+				    <td>
+				    	<a href="#"><i class="icon-eye-open"></i></a>
+				    	<a href="#"><i class="icon-edit"></i></a>
+				    	<a href="#"><i class="icon-remove"></i></a>
+				    </td>
+				  </tr>
+				  
+				<% @tasks.each do |task| %>
+				  <tr>
+				    <td><%= task.name %></td>
+				    <td><%= task.description %></td>
+				    <td><%= task.priority %></td>
+				    <td><%= task.deadline %></td>
+				    <td><%= link_to 'Show', task %></td>
+				    <td><%= link_to 'Edit', edit_task_path(task) %></td>
+				    <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+				  </tr>
+				<% end %>
+			  </tbody>
+			</table>
+      </div>
+
+      <div class="row tasklist">
+      	<div class="span8">
+      		DREI
+      	</div>
+      </div>
+
+    </div>
+    <div class="span4 abstimmung">
+		      as akd maslkdm alskdm alskdm alsmd alskdm alsdm
+		      as akd maslkdm alskdm alskdm alsmd alskdm alsdm
+		      as akd maslkdm alskdm alskdm alsmd alskdm alsdm
+		      as akd maslkdm alskdm alskdm alsmd alskdm alsdm
+		      as akd maslkdm alskdm alskdm alsmd alskdm alsdm
+		      as akd maslkdm alskdm alskdm alsmd alskdm alsdm
+		      as akd maslkdm alskdm alskdm alsmd alskdm alsdm
+		      as akd maslkdm alskdm alskdm alsmd alskdm alsdm
+		      as akd maslkdm alskdm alskdm alsmd alskdm alsdm
+		      as akd maslkdm alskdm alskdm alsmd alskdm alsdm
+		      as akd maslkdm alskdm alskdm alsmd alskdm alsdm
+		      as akd maslkdm alskdm alskdm alsmd alskdm alsdm
+		      as akd maslkdm alskdm alskdm alsmd alskdm alsdm<br />as akd maslkdm alskdm alskdm alsmd alskdm alsdm
+    </div>
+  </div>
+</div>

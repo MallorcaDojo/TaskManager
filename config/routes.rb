@@ -1,9 +1,11 @@
 TaskmanagerFinal::Application.routes.draw do
+  
   resources :projects
   resources :comments
   resources :tasks
   resources :statuses
   resources :users
+  resources :sessions
   
   match 'admin', :to => 'tasks#administration', :via => [:get]
 

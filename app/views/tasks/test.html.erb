@@ -2,8 +2,13 @@
 <script type="text/javascript">
 	$(document).ready(function() {
 		//resetDraggable();
-		setupDragDrop($("#status0 tr"),$("#status1 tr"))
+		init();
 	});
+	
+	function init() {
+		setupDragDrop($("#status0 tr"),$("#status1 tr"));
+		setupDragDrop($("#status1 tr"),$("#status0 tr"));
+	}
 	
 	function setupDragDrop(source, target) {
     source.draggable({
@@ -16,7 +21,8 @@
 
     target.droppable({
         drop: function(event, ui) {
-            alert('row dropped ' + $(this).text());
+        	$(ui.draggable).insertAfter($(this));
+        	init();
         },
         accept: source.selector
     });
@@ -46,6 +52,7 @@
 <h1>Drag and Drop - TestView</h1>
 
 <table id="status0">
+
 	<th>Name</th><th>Description</th>
 	<% @tasks.each do |task| %>
 	<tr class="taskRow">
@@ -53,6 +60,7 @@
 		<td><%= task.description %></td>
 	</tr>
 	<% end %>
+
 	<table>
 
 		<hr />
@@ -60,4 +68,6 @@
 		<table id="status1">
 
 	<th>Name</th><th>Description</th>
+	<tr><td>Hallo</td><td>Welt</td></tr>
+
 	<table>

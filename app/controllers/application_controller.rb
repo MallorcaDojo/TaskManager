@@ -5,17 +5,12 @@ class ApplicationController < ActionController::Base
   before_filter :check_session
   
   def check_session
-    
-      #puts controller_name
-      #puts action_name
-      
       #puts !logged_in? && controller_name.eql?("sessions") && action_name.eql?("new")
-      if !logged_in? && !controller_name.eql?("sessions") && !action_name.eql?("new")  
-        #puts controller_name.eql?("sessions")
-        #puts action_name.eql?("new")
+      if not controller_name.eql?("users") && action_name.eql?("create") 
+       if !logged_in? && !controller_name.eql?("sessions") && !action_name.eql?("new")  
         redirect_to :controller => "sessions", :action => "new"
+       end 
       end 
-
   end
   
   def current_user
@@ -26,5 +21,5 @@ class ApplicationController < ActionController::Base
     !! session[:user_id]  
   end
   
-  helper_method :current_user, :logged_in?, :check_user
+  helper_method :current_user, :logged_in?
 end

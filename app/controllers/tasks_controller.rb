@@ -22,14 +22,36 @@ class TasksController < ApplicationController
     #end
   end
   
+  def checkList(status)
+    if status
+      return status.tasks
+     else
+      return Array.new
+    end
+  end
+  
   # GET /tasks
   # GET /tasks.json
   def index
-    @tasks = Task.all
+    status_unassigned = Status.find_by_name("Unassigned")    
+    @unassigned = checkList(status_unassigned)  
+
+    status_implementing = Status.find_by_name("Implementing")
+    @implementing = checkList(status_implementing)
+    
+    status_testing = Status.find_by_name("Testing")
+    @testing = checkList(status_testing)
+    
+    status_completed = Status.find_by_name("Completed")
+    @completed = checkList(status_completed)
+    
+    status_pending = Status.find_by_name("Pending")
+    @pending = checkList(status_pending)
+     
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @tasks }
+      #format.json { render json: @tasks }
     end
   end
 

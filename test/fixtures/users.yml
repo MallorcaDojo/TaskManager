@@ -1,15 +1,22 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  lastname: Mustermann
-  firstname: Max
+  lastname: Duck
+  firstname: Donald
   birthday: 1980-09-14
-  email: test@test.de 
+  email: donald@test.de 
   password: 202cb962ac59075b964b07152d234b70
 
 two:
-  lastname: Musterfrau
-  firstname: Maria
-  birthday: 1990-09-14
+  lastname: Duck
+  firstname: Daisy
+  birthday: 1990-09-13
+  email: daisy@test.de 
+  password: 202cb962ac59075b964b07152d234b70
+  
+three:
+  lastname: Mouse
+  firstname: Mickey
+  birthday: 1990-09-12
   email: test@test.de 
   password: 202cb962ac59075b964b07152d234b70

@@ -33,20 +33,20 @@ class TasksController < ApplicationController
   # GET /tasks
   # GET /tasks.json
   def index
-    status_unassigned = Status.find_by_name("Unassigned")    
-    @unassigned = checkList(status_unassigned)  
+    @status_unassigned = Status.find_by_name("Unassigned")    
+    @unassigned = checkList(@status_unassigned)  
 
-    status_implementing = Status.find_by_name("Implementing")
-    @implementing = checkList(status_implementing)
+    @status_implementing = Status.find_by_name("Implementing")
+    @implementing = checkList(@status_implementing)
     
-    status_testing = Status.find_by_name("Testing")
-    @testing = checkList(status_testing)
+    @status_testing = Status.find_by_name("Testing")
+    @testing = checkList(@status_testing)
     
-    status_completed = Status.find_by_name("Completed")
-    @completed = checkList(status_completed)
+    @status_completed = Status.find_by_name("Completed")
+    @completed = checkList(@status_completed)
     
-    status_pending = Status.find_by_name("Pending")
-    @pending = checkList(status_pending)
+    @status_pending = Status.find_by_name("Pending")
+    @pending = checkList(@status_pending)
      
 
     respond_to do |format|

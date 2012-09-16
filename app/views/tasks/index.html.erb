@@ -3,7 +3,7 @@
     <div class="span8">
 
       <div class="row tasklist">
-      		<table class="table table-striped table-bordered table-hover">
+      		<table class="table table-striped table-bordered table-hover" id="statusId<%= @status_unassigned.id %>">
       			<caption class="unassigned">Unassigned</caption>
       			<thead>
 				  <tr>
@@ -17,7 +17,7 @@
 			  
 			  <tbody>
 				<% @unassigned.each do |task| %>
-				  <tr>
+				  <tr id="taskId<%= task.id %>">
 				    <td><%= task.name %></td>
 				    <td><%= task.description %></td>
 				    <td><%= task.priority %></td>
@@ -34,7 +34,7 @@
       </div>
 
       <div class="row tasklist">
-      	<table class="table table-striped table-bordered table-hover">
+      	<table class="table table-striped table-bordered table-hover"  id="statusId<%= @status_implementing.id %>">
       			<caption class="implementing">Implementing</caption>
       			<thead>
 				  <tr>
@@ -48,7 +48,7 @@
 			  
 				<tbody>
 				<% @implementing.each do |task| %>
-				  <tr>
+				  <tr  id="taskId<%= task.id %>">
 				    <td><%= task.name %></td>
 				    <td><%= task.description %></td>
 				    <td><%= task.priority %></td>
@@ -65,7 +65,7 @@
       </div>
       
       <div class="row tasklist">
-      	<table class="table table-striped table-bordered table-hover">
+      	<table class="table table-striped table-bordered table-hover"   id="statusId<%= @status_testing.id %>">
       			<caption class="testing">Testing</caption>
       			<thead>
 				  <tr>
@@ -79,7 +79,7 @@
 			  
 				<tbody>
 				<% @testing.each do |task| %>
-				  <tr>
+				  <tr id="taskId<%= task.id %>">
 				    <td><%= task.name %></td>
 				    <td><%= task.description %></td>
 				    <td><%= task.priority %></td>
@@ -96,7 +96,7 @@
       </div>
       
       <div class="row tasklist">
-      	<table class="table table-striped table-bordered table-hover">
+      	<table class="table table-striped table-bordered table-hover"   id="statusId<%= @status_completed.id %>">
       			<caption class="completed">Completed</caption>
       			<thead>
 				  <tr>
@@ -110,7 +110,7 @@
 			  
 				<tbody>
 				<% @completed.each do |task| %>
-				  <tr>
+				  <tr id="taskId<%= task.id %>">
 				    <td><%= task.name %></td>
 				    <td><%= task.description %></td>
 				    <td><%= task.priority %></td>
@@ -129,7 +129,7 @@
     </div>
     <div class="span4 abstimmung">
 		    <div class="tasklist">
-      	<table class="table table-striped table-bordered table-hover">
+      	<table class="table table-striped table-bordered table-hover"   id="statusId<%= @status_pending.id %>">
       			<caption class="pending">Pending</caption>
       			<thead>
 				  <tr>
@@ -143,7 +143,7 @@
 			  
 				<tbody>
 				<% @pending.each do |task| %>
-				  <tr>
+				  <tr id="taskId<%= task.id %>">
 				    <td><%= task.name %></td>
 				    <td><%= task.description %></td>
 				    <td><%= task.priority %></td>

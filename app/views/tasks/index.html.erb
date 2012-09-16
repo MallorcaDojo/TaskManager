@@ -9,6 +9,7 @@
 				  <tr>
 				    <th>Name</th>
 				    <th>Description</th>
+				    <th>Owner</th>
 				    <th>Priority</th>
 				    <th>Deadline</th>
 				    <th>Actions</th>
@@ -20,8 +21,9 @@
 				  <tr rel="<%= task.id %>">
 				    <td><%= task.name %></td>
 				    <td><%= task.description %></td>
-				    <td><%= task.priority %></td>
-				    <td><%= task.deadline %></td>
+				    <td><%= task.user.firstname %></td>
+				    <td><%= task.priority(:name) %></td>
+				    <td><%= task.deadline.strftime('%d.%m.%Y') %></td>
 				    <td>
 				    <%= link_to raw('<i class="icon-eye-open"></i>'), task %>
 				    	<%= link_to raw('<i class="icon-edit"></i>'), edit_task_path(task) %>
@@ -40,6 +42,7 @@
 				  <tr>
 				    <th>Name</th>
 				    <th>Description</th>
+				    <th>Owner</th>
 				    <th>Priority</th>
 				    <th>Deadline</th>
 				    <th>Actions</th>
@@ -51,8 +54,9 @@
 				  <tr  rel="<%= task.id %>">
 				    <td><%= task.name %></td>
 				    <td><%= task.description %></td>
-				    <td><%= task.priority %></td>
-				    <td><%= task.deadline %></td>
+				    <td><%= task.user.firstname %></td>
+				    <td><%= task.priority(:name) %></td>
+				    <td><%= task.deadline.strftime('%d.%m.%Y') %></td>
 				    <td>
 				    	<%= link_to raw('<i class="icon-eye-open"></i>'), task %>
 				    	<%= link_to raw('<i class="icon-edit"></i>'), edit_task_path(task) %>
@@ -71,6 +75,7 @@
 				  <tr>
 				    <th>Name</th>
 				    <th>Description</th>
+				    <th>Owner</th>
 				    <th>Priority</th>
 				    <th>Deadline</th>
 				    <th>Actions</th>
@@ -82,8 +87,9 @@
 				  <tr rel="<%= task.id %>">
 				    <td><%= task.name %></td>
 				    <td><%= task.description %></td>
-				    <td><%= task.priority %></td>
-				    <td><%= task.deadline %></td>
+				    <td><%= task.user.firstname %></td>
+				    <td><%= task.priority(:name) %></td>
+				    <td><%= task.deadline.strftime('%d.%m.%Y') %></td>
 				    <td>
 				    	<%= link_to raw('<i class="icon-eye-open"></i>'), task %>
 				    	<%= link_to raw('<i class="icon-edit"></i>'), edit_task_path(task) %>
@@ -102,6 +108,7 @@
 				  <tr>
 				    <th>Name</th>
 				    <th>Description</th>
+				    <th>Owner</th>
 				    <th>Priority</th>
 				    <th>Deadline</th>
 				    <th>Actions</th>
@@ -113,8 +120,9 @@
 				  <tr rel="<%= task.id %>">
 				    <td><%= task.name %></td>
 				    <td><%= task.description %></td>
-				    <td><%= task.priority %></td>
-				    <td><%= task.deadline %></td>
+				    <td><%= task.user.firstname %></td>
+				    <td><%= task.priority(:name) %></td>
+				    <td><%= task.deadline.strftime('%d.%m.%Y') %></td>
 				    <td>
 				   <%= link_to raw('<i class="icon-eye-open"></i>'), task %>
 				    	<%= link_to raw('<i class="icon-edit"></i>'), edit_task_path(task) %>
@@ -135,6 +143,7 @@
 				  <tr>
 				    <th>Name</th>
 				    <th>Desc.</th>
+				    <th>Owner</th>
 				    <th>Prio</th>
 				    <th>Deadl.</th>
 				    <th>Act.</th>
@@ -146,8 +155,9 @@
 				  <tr rel="<%= task.id %>">
 				    <td><%= task.name %></td>
 				    <td><%= task.description %></td>
-				    <td><%= task.priority %></td>
-				    <td><%= task.deadline %></td>
+				    <td><%= task.user.firstname %></td>
+				    <td><%= task.priority(:name) %></td>
+				    <td><%= task.deadline.strftime('%d.%m.%Y') %></td>
 				    <td>
 				    <%= link_to raw('<i class="icon-eye-open"></i>'), task %>
 				    	<%= link_to raw('<i class="icon-edit"></i>'), edit_task_path(task) %>

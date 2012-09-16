@@ -2,11 +2,11 @@ class TasksController < ApplicationController
   
   def move_task
     $task_id = params[:task_id]
-    $new_status = params[:status]
-    $user = ApplicationController.current_user
-    #$user = session[:current_user_id]
+    $new_status_id = params[:status_id]
+    $user = @current_user
     
     $task = Task.find($task_id)
+    $new_status = Status.find($new_status_id)
     $task.status = $new_status
     $task.user = $user
     render :text => $task.save

@@ -48,8 +48,7 @@
 									  <li><a href="#">Home</a></li>
 									  <li><a href="#">Foo</a></li>
 									  <li><a href="#">Bar</a></li>
-									  <li><a href="/kill_session">Logout</a></li>
-						
+									  <li><a href="/kill_session">Logout <% if logged_in? -%><%= current_user.firstname %><% end -%></a></li>
 									</ul>
 								</div>
 							</div>

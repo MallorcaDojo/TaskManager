@@ -7,7 +7,7 @@ one:
   deadline: 2012-09-16 10:47:44
   status: unassigned
   project: one
-  user: one
+  user: two
 
 two:
   name: Task2
@@ -25,7 +25,7 @@ three:
   deadline: 2012-09-16 10:47:44
   status: unassigned
   project: one
-  user: one
+  user: three
 
 four:
   name: Task4
@@ -43,7 +43,7 @@ five:
   deadline: 2012-09-16 10:47:44
   status: implementing
   project: one
-  user: one
+  user: two
 
 six:
   name: Task2
@@ -61,7 +61,7 @@ seven:
   deadline: 2012-09-16 10:47:44
   status: implementing
   project: one
-  user: one
+  user: two
 
 eight:
   name: Task4
@@ -70,5 +70,5 @@ eight:
   deadline: 2012-09-17 10:47:44
   status: implementing
   project: one
-  user: one
+  user: three
 

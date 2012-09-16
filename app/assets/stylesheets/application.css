@@ -4931,6 +4931,11 @@ input[type="submit"] .caret {
 #dashboard .tasklist table tr td:last-child {
   width: 75px;
 }
+#dashboard .abstimmung {
+  position: fixed;
+  right: 40px;
+  top: 55px;
+}
 #dashboard caption.pending {
   background-color: #FCF8E3;
   color: #C09853;

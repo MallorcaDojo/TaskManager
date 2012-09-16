@@ -24,13 +24,38 @@ $(document).ready(function () {
 	$( "#dashboard tbody tr" ).draggable({
 		helper: "clone"
 	});
-	$( "#dashboard tbody tr, #dashboard thead" ).droppable({
+	$("#dashboard tbody tr, #dashboard thead").droppable({
 		activeClass: "ui-state-default",
 		hoverClass: "ui-state-hover",
 		accept: ":not(.ui-sortable-helper)",
-		drop: function( event, ui ) {
-			$( this ).find( ".placeholder" ).remove();
-			$(ui.draggable).insertAfter( this );
+		drop: function(event, ui) {
+			$(this).find( ".placeholder" ).remove();
+			
+			var draggedElement = $(ui.draggable); 
+			draggedElement.insertAfter(this);
+			
+			var taskId = draggedElement.attr('rel');
+			
+			var parentElement = $(this).parent();
+			if (parentElement.get(0).tagName == 'TBODY') {
+				parentElement = parentElement.parent();
+			}
+			var statusId = parentElement.attr('rel');
+			
+			//alert('Task ' + taskId + ' was dropped into the status ' + statusId);
+			
+			$.ajax({
+				type: "POST",
+				url: '/move_task/',
+				data: {
+					'task_id': taskId,
+					'status_id:': statusId
+				},
+				dataType: 'html',
+				success: function(msg) {
+					alert( "Data Saved: " + msg );
+				}
+			});
 		}
 	});
 	

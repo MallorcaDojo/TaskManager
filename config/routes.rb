@@ -8,7 +8,7 @@ TaskmanagerFinal::Application.routes.draw do
   resources :sessions
   
   match 'admin', :to => 'tasks#administration', :via => [:get]
-  match 'move_task', :to => 'tasks#move_task', :via => [:put]
+  match 'move_task', :to => 'tasks#move_task', :via => [:post]
   match 'test', :to => 'tasks#test', :via => [:get]
   match 'kill_session',:to => "sessions#destroy", :via => [:get]
 

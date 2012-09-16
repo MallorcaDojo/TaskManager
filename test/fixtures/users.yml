@@ -4,8 +4,12 @@ one:
   lastname: Mustermann
   firstname: Max
   birthday: 1980-09-14
+  email: test@test.de 
+  password: 202cb962ac59075b964b07152d234b70
 
 two:
   lastname: Musterfrau
   firstname: Maria
   birthday: 1990-09-14
+  email: test@test.de 
+  password: 202cb962ac59075b964b07152d234b70

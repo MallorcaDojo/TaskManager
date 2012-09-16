@@ -17,10 +17,6 @@
 $(document).ready(function () {
 	$('label').addClass('control-label');
 	
-	$('#myModalButton, #myModal .close').click(function(){
-		$('#myModal').toggle();
-	});
-	
 	$( "#dashboard tbody tr" ).draggable({
 		helper: "clone"
 	});
@@ -49,11 +45,12 @@ $(document).ready(function () {
 				url: '/move_task/',
 				data: {
 					'task_id': taskId,
-					'status_id:': statusId
+					'status_id': statusId,
+					'user_id': $('#user_id').val()
 				},
 				dataType: 'html',
 				success: function(msg) {
-					alert( "Data Saved: " + msg );
+					//alert( "Data Saved: " + msg );
 				}
 			});
 		}

@@ -1,15 +1,18 @@
 class TasksController < ApplicationController
   
   def move_task
-    $task_id = params[:task_id]
-    $new_status_id = params[:status_id]
-    $user = @current_user
+    task_id = params[:task_id]
     
-    $task = Task.find($task_id)
-    $new_status = Status.find($new_status_id)
-    $task.status = $new_status
-    $task.user = $user
-    render :text => $task.save
+    new_status_id = params[:status_id]
+    puts params
+    
+    user = User.find(params[:user_id])
+    
+    task = Task.find(task_id)
+    new_status = Status.find(new_status_id)
+    task.status = new_status
+    task.user = user
+    render :text => task.save
   end
 
   
@@ -48,6 +51,8 @@ class TasksController < ApplicationController
     @status_pending = Status.find_by_name("Pending")
     @pending = checkList(@status_pending)
      
+     
+     @user_id = session[:user_id]
 
     respond_to do |format|
       format.html # index.html.erb

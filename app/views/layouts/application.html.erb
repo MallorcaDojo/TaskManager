@@ -45,10 +45,9 @@
 								</div>
 								<div class="span10">
 									<ul class="nav nav-pills pull-right">
+									  <li><a href="#"><% if logged_in? -%>Logged in as <%= current_user.firstname %><% end -%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
 									  <li><a href="#">Home</a></li>
-									  <li><a href="#">Foo</a></li>
-									  <li><a href="#">Bar</a></li>
-									  <li><a href="/kill_session">Logout <% if logged_in? -%><%= current_user.firstname %><% end -%></a></li>
+									  <li><a href="/kill_session">Logout</a></li>
 									</ul>
 								</div>
 							</div>
@@ -69,7 +68,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="span12">
-							FOOTER
+							FOOTER of the year (Valentino kann's bestätigen)
 						</div>
 					</div>
 				</div>

@@ -8,7 +8,9 @@ class ApplicationController < ActionController::Base
       #puts !logged_in? && controller_name.eql?("sessions") && action_name.eql?("new")
       if not controller_name.eql?("users") && action_name.eql?("create") 
        if !logged_in? && !controller_name.eql?("sessions") && !action_name.eql?("new")  
-        redirect_to :controller => "sessions", :action => "new"
+         if !controller_name.eql?("tasks") && !action_name.eql?("move_tasks")
+            redirect_to :controller => "sessions", :action => "new"   
+         end
        end 
       end 
   end
